@@ -8,9 +8,9 @@ resolvers += Resolver.bintrayRepo("tanukkii007", "maven")
 
 enablePlugins(JavaServerAppPackaging, DockerPlugin)
 
-val akkaVersion = "2.5.12"
-val akkaHttpVersion = "10.1.1"
-val akkaManagementVersion = "0.13.1"
+val akkaVersion = "2.5.17"
+val akkaHttpVersion = "10.1.5"
+val akkaManagementVersion = "0.18.0"
 
 libraryDependencies ++=Seq(
   "com.typesafe.akka" %% "akka-persistence" % akkaVersion,

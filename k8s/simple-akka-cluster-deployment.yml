@@ -17,6 +17,7 @@ spec:
       labels:
         app: akka-simple-cluster
     spec:
+      serviceAccountName: akka-simple-cluster
       containers:
       - image: softwaremill/akka-simple-cluster-k8s:0.0.1-SNAPSHOT
         imagePullPolicy: IfNotPresent
@@ -37,10 +38,10 @@ spec:
         readinessProbe:
           tcpSocket:
             port: 8080
-            initialDelaySeconds: 5
-            periodSeconds: 10
+          initialDelaySeconds: 5
+          periodSeconds: 10
         livenessProbe:
           tcpSocket:
             port: 8080
-            initialDelaySeconds: 15
-            periodSeconds: 20
+          initialDelaySeconds: 15
+          periodSeconds: 20
