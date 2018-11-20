@@ -28,5 +28,6 @@ libraryDependencies ++=Seq(
   "com.github.TanUkkii007" %% "akka-cluster-custom-downing" % "0.0.12"
 )
 
-dockerBaseImage := "openjdk:8"
+dockerBaseImage := "openjdk:8-jre-slim"
 dockerUsername := Some("softwaremill")
+dockerEntrypoint := List("/opt/docker/bin/entrypoint.sh") ++ dockerEntrypoint.value
