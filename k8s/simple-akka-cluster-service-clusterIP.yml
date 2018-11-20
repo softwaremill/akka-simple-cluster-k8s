@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: akka-simple-cluster-cluster-ip
+spec:
+  ports:
+  - name: remoting
+    port: 2551
+    protocol: TCP
+    targetPort: 2551
+  - name: management
+    port: 8558
+    protocol: TCP
+    targetPort: 8558
+  selector:
+    app: akka-simple-cluster

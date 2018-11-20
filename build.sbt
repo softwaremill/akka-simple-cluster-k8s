@@ -10,7 +10,7 @@ enablePlugins(JavaServerAppPackaging, DockerPlugin)
 
 val akkaVersion = "2.5.17"
 val akkaHttpVersion = "10.1.5"
-val akkaManagementVersion = "0.18.0"
+val akkaManagementVersion = "0.19.0"
 
 libraryDependencies ++=Seq(
   "com.typesafe.akka" %% "akka-persistence" % akkaVersion,
