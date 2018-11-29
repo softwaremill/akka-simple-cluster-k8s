@@ -1,0 +1,16 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: ServiceEntry
+metadata:
+  name: akka-simple-cluster
+spec:
+  hosts:
+  - "*.default.pod.cluster.local"
+  location: MESH_INTERNAL
+  ports:
+  - number: 2551
+    name: "remoting"
+    protocol: TCP
+  - number: 8558
+    name: "management"
+    protocol: HTTP
+  resolution: NONE

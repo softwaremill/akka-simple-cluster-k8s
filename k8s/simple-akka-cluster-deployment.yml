@@ -28,6 +28,8 @@ spec:
               fieldRef:
                 apiVersion: v1
                 fieldPath: status.podIP
+          - name: "DYN_JAVA_OPTS"
+            value: "-Dakka.remote.netty.tcp.hostname=${HOSTNAME//./-}.default.pod.cluster.local -Dakka.management.http.hostname=${HOSTNAME//./-}.default.pod.cluster.local"
         ports:
         - name: remoting
           containerPort: 2551
